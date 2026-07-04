@@ -24,8 +24,8 @@
 
 1. Foundation Model 탐색 및 모델 호출
 - Bedrock에서 사용 가능한 Foundation Model 목록 조회
-- 'invoke_model()' API를 이용하여 Claude 모델 호출
-- 'converse()' API를 이용한 멀티턴 대화 구현
+- `invoke_model()` API를 이용하여 Claude 모델 호출
+- `converse()` API를 이용한 멀티턴 대화 구현
 - Temperature와 Max Tokens 등의 추론 파라미터 실습
 
 2. 프롬프트 엔지니어링
@@ -38,7 +38,7 @@
 - FAQ 데이터 기반 키워드 검색 기능 구현
 - 검색된 FAQ를 System Prompt에 주입(Context Injection)
 - 멀티턴 대화 히스토리 관리
-- 'converse_stream()'을 활용한 스트리밍 응답 구현
+- `converse_stream()`을 활용한 스트리밍 응답 구현
 - 테스트 케이스를 이용한 챗봇 품질 평가
 
 ### 💡 배운 점
