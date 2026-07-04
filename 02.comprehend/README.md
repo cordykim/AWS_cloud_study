@@ -23,14 +23,37 @@
 ## 실습 목표
 - Amazon Comprehend의 다양한 자연어 처리(NLP) API를 활용하여 텍스트 분석 기능을 학습하였다.
 
-## 실습 내용
-| Lab   | 내용                  | 주요 API                                                                         |
-| ----- | ------------------- | ------------------------------------------------------------------------------ |
-| Lab 1 | 언어 감지 및 감성 분석       | `detect_dominant_language()`, `detect_sentiment()`, `batch_detect_sentiment()` |
-| Lab 2 | 개체명 인식 및 핵심 문구 추출   | `detect_entities()`, `detect_key_phrases()`                                    |
-| Lab 3 | 개체별 감성 분석 및 개인정보 탐지 | `detect_targeted_sentiment()`, `detect_pii_entities()`                         |
-| Lab 4 | 품사 분석 및 종합 분석 파이프라인 | `detect_syntax()`                                                              |
-| Lab 5 | 토픽 모델링 개념 및 군집화     | TF-IDF, K-Means, Topic Modeling                                                |
+## Amazon Comprehend 실습 내용
 
+### 이번 실습에서는 Amazon Comprehend의 주요 자연어 처리 기능을 활용하여 텍스트를 자동 분석하는 방법을 학습하였다.
 
+1. 언어 감지 및 감성 분석
+- detect_dominant_language()를 이용하여 텍스트의 언어를 자동으로 감지
+- detect_sentiment()와 batch_detect_sentiment()를 이용하여 문서의 감정(Positive, Negative, Neutral, Mixed) 분석
+- 여러 문서를 일괄 처리하고 감성 분석 결과를 시각화
 
+2. 개체명 인식 및 핵심 문구 추출
+- detect_entities()를 이용하여 인물, 장소, 조직, 날짜 등의 개체명(NER) 추출
+- detect_key_phrases()를 이용하여 문서의 핵심 문구(Key Phrase) 추출
+- 추출된 결과를 DataFrame 및 그래프로 시각화하여 분석
+  
+3. 대상별 감성 분석 및 개인정보 탐지
+- detect_targeted_sentiment()를 이용하여 특정 대상(제품, 기능 등)에 대한 개별 감성 분석
+- detect_pii_entities()를 이용하여 이름, 이메일, 전화번호 등 개인정보(PII) 탐지
+- 탐지된 개인정보를 마스킹 처리하는 기능 구현
+
+4. 구문 분석 및 분석 파이프라인 구축
+- detect_syntax()를 이용하여 품사(POS) 태깅 수행
+- 언어 감지, 감성 분석, 개체명 인식, 핵심 문구 추출 기능을 하나의 분석 파이프라인으로 통합
+- 분석 결과를 JSON 및 CSV 형태로 저장하고 시각화
+  
+5. 토픽 모델링 및 비지도 학습
+- Amazon Comprehend의 토픽 모델링 동작 방식 이해
+- TF-IDF를 이용하여 문서를 벡터화
+- K-Means 군집화를 통해 라벨 없이 유사한 문서를 토픽별로 분류하는 과정 실습
+- 지도학습과 비지도학습의 차이 이해
+
+## 💡 배운 점
+- Amazon Comprehend는 별도의 모델 학습 없이 다양한 자연어 처리 기능을 API 형태로 제공한다.
+- 텍스트의 언어, 감정, 개체명, 핵심 문구, 개인정보 등을 자동으로 분석할 수 있으며, 여러 기능을 하나의 - 파이프라인으로 구성하여 활용할 수 있다.
+- 토픽 모델링과 군집화를 통해 라벨이 없는 데이터에서도 의미 있는 주제를 추출하는 과정을 이해하였다.
